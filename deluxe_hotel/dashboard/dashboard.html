@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="bg-gray-400">
+    <div class="flex justify-between">
+      <h1 class="text-4xl mt-2 p-2 text-blue-600">Welcome to Dashboard</h1>
+      <img class="bg-blue-600 mt-4 border-36 mr-4 rounded-2xl" src="../../Assest/imggggg-removebg-preview.png" alt="">
+    </div>
+    
+    <div>
+      <div class="flex p-2">
+        <p class="mt-2 mr-8 text-xl font-light text-black">Welcome,</p>
+        <button id="ok" class="border-solid border-2 h-9 w-10 border-green-600 rounded-full bg-white font-light text-xs"></button>
+      </div>
+    </div>
+    
+
+    <div class="grid grid-cols-4 mt-8 gap-4 mr-10">
+        <div class="w-70 ml-6 h-40 bg-green-700 border-36 rounded-2xl mb-12">
+            <p class="text-white text-center text-4xl pt-4 pb-4">New Booking</p>
+            <p class="text-2xl text-white text-center">001</p>
+        </div>
+        <div class="w-70 ml-6 h-40 bg-yellow-700 border-36 pt-4 rounded-2xl mb-12">
+            <p class="text-white text-center text-4xl pb-4">Schedule Room</p>
+            <p class="text-2xl text-white text-center">001</p>
+        </div>
+        <div class="w-70 ml-6 h-40 bg-red-700 border-36 pt-4 rounded-2xl mb-12">
+            <p class="text-white text-center text-4xl pb-4 ">Check in</p>
+            <p class="text-2xl text-white text-center">001</p>
+        </div>
+        <div class="w-70 ml-6 h-40 bg-black border-36 pt-4 p-2 rounded-2xl mb-12">
+            <p class="text-white text-center text-4xl pb-4">Check out</p>
+            <p class="text-2xl text-white text-center">001</p>
+        </div>
+    </div>
+
+    <div class="mt-2 p-2"> 
+      <button id="modalButton" class="w-20 bg-green-300 rounded-2xl text-xs h-8 text-black">Create room</button>
+      <table class="w-full table-fixed border-spacing-x-11 mt-4">
+        <thead> 
+          <tr>
+              <div>
+                <th class="flex">Room Name</th>
+              </div>
+            <th class="">Bed Type</th>
+            <th>Room Floor</th> 
+            <th>Room Facility</th>
+            <!-- <th>Status</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <!-- appending tr element from javascript here -->
+        </tbody>
+      </table>
+    </div>
+    <div id="modal" class="h-98 w-80 p-10 invisible">
+        <div id="clossButton" class="right-0 text-red-400">X</div>
+        <div class="grid justify-item-center">
+            <div class="w-60 ">
+                <form action="" id="roomForm">
+                    <div class="mb-3">
+                        <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Room Name</label>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                          <input type="text" name="roomName" id="roomName" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Bed Type</label>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                          <input type="text" name="bedType" id="bedType" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Room Floor</label>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                         
+                          <input type="text" name="roomFloor" id="roomFloor" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="price" class="block text-sm font-medium leading-6 text-gray-900">Room Facility</label>
+                        <div class="relative mt-2 rounded-md shadow-sm">
+                          <input type="text" name="roomFacility" id="roomFacility" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                        </div>
+                    </div>
+                </form>
+                
+            
+                <div class="mt-5">
+                    <button class="rounded-full bg-green-700" id="roomButton">Save</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div>
+
+    <script src="./dashboard.js"></script>
+</body>
+</html>
